@@ -1,0 +1,3 @@
+motivasi saya mengikuti bootcamp sanbercode Laravel adalah untuk memahami kembali tentang laravel, 
+terkait fullstack dan juga untuk membuat portofolio. Yang mana tujuan akhirnya adalah untuk bekerja.
+harapannya setelah belajar laravel ini, saya siap bersaing di dunia kerja.
