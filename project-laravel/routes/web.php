@@ -19,3 +19,15 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'utama']);
 Route::get('/register', [AuthController::class, 'register']);
 Route::post('/home', [AuthController::class, 'home']);
+
+Route::get('/master', function () {
+    return view('layouts.master');
+});
+
+Route::get('/data-table', function () {
+    return view('page.dataTable');
+});
+
+Route::get('/table', function () {
+    return view('page.table');
+});
