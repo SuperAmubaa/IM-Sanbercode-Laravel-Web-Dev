@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CastController;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Expr\Cast;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +33,11 @@ Route::get('/data-table', function () {
 Route::get('/table', function () {
     return view('page.table');
 });
+
+Route::get('/cast/create', [CastController::class, 'create']);
+Route::post('/cast', [CastController::class, 'store']);
+Route::get('/cast', [CastController::class, 'index']);
+Route::get('/cast/{id}', [CastController::class, 'show']);
+Route::get('/cast/{id}/edit', [CastController::class, 'edit']);
+Route::put('/cast/{id}', [CastController::class, 'update']);
+Route::delete('/cast/{id}', [CastController::class, 'destroy']);
