@@ -21,7 +21,6 @@
         <input type="radio" value="3" name="gender" /> Other <br />
         <br />
         <label>Nationality</label>
-
         <select name="nationality" id="nationality">
             <option value="indonesia">Indonesia</option>
             <option value="arab">Saudi Arabia</option>

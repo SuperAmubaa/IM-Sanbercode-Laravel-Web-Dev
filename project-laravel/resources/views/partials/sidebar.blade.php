@@ -59,4 +59,33 @@
                                 </a>
                             </li>
                         </ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-film"></i>
+                            <p>
+                                Data Film
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/film" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Film</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/genre" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Genre</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/cast" class="nav-link">
+                                    <i class="far fa-user nav-icon"></i>
+                                    <p>Cast</p>
+                                </a>
+                            </li>
+                        </ul>
+
             </nav>

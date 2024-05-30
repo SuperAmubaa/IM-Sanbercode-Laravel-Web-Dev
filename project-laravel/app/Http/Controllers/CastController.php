@@ -13,13 +13,6 @@ class CastController extends Controller
     public function index()
     {
         $cast = DB::table('cast')->get();
-
-        $title = 'Delete User!';
-        $text = "Are you sure you want to delete?";
-        confirmDelete($title, $text);
-
-
-
         return view('cast.home', ['cast' => $cast]);
     }
 
