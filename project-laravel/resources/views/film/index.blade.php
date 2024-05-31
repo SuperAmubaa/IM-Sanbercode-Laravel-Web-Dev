@@ -6,7 +6,10 @@
 
 
 @section('content')
-    <a href="/film/create" class="btn btn-sm btn-primary my-3">Tambah</a>
+    @auth
+        <a href="/film/create" class="btn btn-sm btn-primary my-3">Tambah</a>
+    @endauth
+
 
     <div class="row">
         @forelse ($film as $item)
@@ -19,12 +22,15 @@
                         <p class="card-text">{{ $item->year }}</p>
                         <p class="card-text">{{ Str::limit($item->summary, 100) }}.</p>
                         <a href="/film/{{ $item->id }}" class="btn btn-primary btn-sm">Detail</a>
-                        <a href="/film/{{ $item->id }}/edit" class="btn btn-info btn-sm">Edit</a>
-                        <form method="post" action="/film/{{ $item->id }}">
-                            @csrf
-                            @method('delete')
-                            <input type="submit" class="btn btn-sm btn-danger" value="Delete">
-                        </form>
+                        @auth
+                            <a href="/film/{{ $item->id }}/edit" class="btn btn-info btn-sm">Edit</a>
+                            <form method="post" action="/film/{{ $item->id }}">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                            </form>
+                        @endauth
+
                     </div>
                 </div>
             </div>
