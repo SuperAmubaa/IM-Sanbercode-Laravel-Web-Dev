@@ -20,6 +20,14 @@
 
         @csrf
         <div class="form-group">
+            <label>Name User</label>
+            <input type="text" value="{{ $profile->users->name }}" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+            <label>Email User</label>
+            <input type="text" value="{{ $profile->users->email }}" class="form-control" readonly>
+        </div>
+        <div class="form-group">
             <label>Age</label>
             <input type="text" value="{{ $profile->age }}" name="age" class="form-control">
         </div>

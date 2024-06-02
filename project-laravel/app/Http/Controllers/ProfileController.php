@@ -64,8 +64,11 @@ class ProfileController extends Controller
             'address' => 'required',
         ]);
 
+        $idUser = Auth::id();
 
         $profile = Profile::find($id);
+
+        $profile->users_id = $idUser;
         $profile->age = $request->input('age');
         $profile->bio = $request->input('bio');
         $profile->address = $request->input('address');

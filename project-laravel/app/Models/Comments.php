@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Comments extends Model
 {
     use HasFactory;
+    protected $table = "comments";
+    protected $fillable = ["users_id", "film_id", "content", "point"];
 
-    protected $table = "profile";
-    protected $fillable = ["age", "bio", "address", "users_id"];
 
-
-    public function users()
+    public function creator()
     {
         return $this->belongsTo(User::class, 'users_id');
     }

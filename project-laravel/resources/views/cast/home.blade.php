@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <a href="/cast/create" class="btn btn-sm btn-primary">Tambah</a>
+    <a href="/cast/create" class="btn btn-sm btn-primary">Add Cast</a>
     <table class="table table-striped">
         <thead>
             <tr>

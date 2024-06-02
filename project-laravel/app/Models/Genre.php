@@ -9,6 +9,11 @@ class Genre extends Model
 {
     use HasFactory;
     protected $table = "genre";
-    
+
     protected $fillable = ["name"];
+
+    public function listGenre()
+    {
+        return $this->hasMany(Film::class, 'genre_id');
+    }
 }

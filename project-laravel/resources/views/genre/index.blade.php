@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <a href="/genre/create" class="btn btn-sm btn-primary">Tambah</a>
+    <a href="/genre/create" class="btn btn-sm btn-primary">Add Genre</a>
     <table class="table table-striped">
         <thead>
             <tr>

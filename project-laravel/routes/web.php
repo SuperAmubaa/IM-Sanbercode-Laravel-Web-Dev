@@ -1,15 +1,16 @@
 <?php
 
+use App\Models\Genre;
+use PhpParser\Node\Expr\Cast;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CastController;
 use App\Http\Controllers\FilmController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Genre;
-use Illuminate\Support\Facades\Auth;
-use PhpParser\Node\Expr\Cast;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::put('/profile/{id}', [ProfileController::class, 'update']);
 
+    Route::post('/comments/{id}', [CommentController::class, 'store']);
 });
 
 
